@@ -4,8 +4,8 @@ function App() {
   return (
     <main>
       <form>
-        <input type="number" />
-        <input type="number" />
+        <input type="number" placeholder="Phone" />
+        <input type="number" placeholder="Total" />
         <button>Submit</button>
       </form>
     </main>
