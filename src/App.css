@@ -36,6 +36,10 @@ form > input {
   font-size: 1.8vw;
 }
 
+form > input:focus {
+  outline: thin solid transparent;
+}
+
 form > button {
   width: 90%;
   height: 20%;
