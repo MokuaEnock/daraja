@@ -7,6 +7,22 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // Returns a zero-based month (0-11)
+    const day = date.getDate();
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    function secss(x) {
+      if (x < 10) {
+        return `0${x}`;
+      } else {
+        return `${x}`;
+      }
+    }
+    let timestamped = `${year}${month}${day}${hour}${minutes}${secss(seconds)}`;
     console.log(phone, amount);
   }
   return (
