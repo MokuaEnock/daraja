@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <>
-     <main></main>
-    </>
+    <main>
+      <form>
+        <input type="number" />
+        <input type="number" />
+        <button>Submit</button>
+      </form>
+    </main>
   );
 }
 

@@ -1,0 +1,39 @@
+#root {
+  width: 100vw;
+  height: 51vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+}
+
+main {
+  width: 40%;
+  height: 90%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+form {
+  width: 90%;
+  height: 50%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+form > input {
+  width: 80%;
+  height: 20%;
+}
+
+form > button {
+  width: 100%;
+  height: 20%;
+}
