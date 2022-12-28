@@ -7,6 +7,7 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(phone, amount);
   }
   return (
     <main>
@@ -16,12 +17,14 @@ function App() {
           placeholder="Phone"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
+          required
         />
         <input
           type="number"
           placeholder="Total"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          required
         />
         <button type="submit">Submit</button>
       </form>
