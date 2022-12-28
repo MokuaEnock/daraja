@@ -23,7 +23,33 @@ function App() {
       }
     }
     let timestamped = `${year}${month}${day}${hour}${minutes}${secss(seconds)}`;
-    console.log(phone, amount);
+    console.log(phone, amount, timestamped);
+
+    let headers = new Headers();
+    headers.append("Content-Type", "application/json");
+    headers.append("Authorization", "Bearer ZbZpvsIl2FTYxNYeGoRUBt6oAPmy");
+
+    fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        BusinessShortCode: 174379,
+        Password:
+          "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjIxMjI5MDIxMzUx",
+        Timestamp: "20221229021351",
+        TransactionType: "CustomerPayBillOnline",
+        Amount: 1,
+        PartyA: 254708374149,
+        PartyB: 174379,
+        PhoneNumber: 254708374149,
+        CallBackURL: "https://mydomain.com/path",
+        AccountReference: "CompanyXLTD",
+        TransactionDesc: "Payment of X",
+      }),
+    })
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log(error));
   }
   return (
     <main>
