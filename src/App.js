@@ -2,6 +2,9 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
+  let [phone, setPhone] = useState("");
+  let [amount, setAmount] = useState("");
+  
   function handleSubmit(e) {
     e.preventDefault();
   }
