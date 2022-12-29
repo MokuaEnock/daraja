@@ -7,8 +7,18 @@ export default function Login() {
   return (
     <main>
       <form>
-        <input type="text" placeholder="Email" />
-        <input type="email" placeholder="Password" />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
         <button type="submit">Log In</button>
       </form>
