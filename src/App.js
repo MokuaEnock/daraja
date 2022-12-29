@@ -32,35 +32,7 @@ function App() {
     let account_ref = 2255;
     let sty = `${short_code}${passkey}${timestamped}`;
     let password = btoa(sty);
-    let access_token_url =
-      "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
-    let initiate_url =
-      "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest";
-    let callback = "https://daraja.vercel.app/callback_url";
 
-    let headers = new Headers();
-    headers.append("Content-Type", "application/json");
-    headers.append("Authorization", "Bearer 82pazhi3HpIQOVtiGmzITzOuiaAX");
-    fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({
-        BusinessShortCode: short_code,
-        Password: password,
-        Timestamp: timestamped,
-        TransactionType: "CustomerPayBillOnline",
-        Amount: 1,
-        PartyA: party_a,
-        PartyB: short_code,
-        PhoneNumber: party_a,
-        CallBackURL: callback,
-        AccountReference: "test",
-        TransactionDesc: "test",
-      }),
-    })
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log(error));
   }
   return (
     <main>
