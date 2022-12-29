@@ -10,7 +10,8 @@ export default function Signup() {
     console.log(email, password, confirm);
     let user = {
       email,
-      password_confimation: password,
+      password,
+      password_confimation: confirm,
     };
 
     fetch("http://localhost:3000/users", {
