@@ -4,10 +4,12 @@ import Signup from "./Signup";
 import Landing from "./Landing";
 import Main from "./Main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route element={<Login />} path="/login" />
         <Route element={<Main />} path="/" />
