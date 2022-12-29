@@ -1,5 +1,13 @@
-import React from "react"
+import React from "react";
 
 export function Login() {
-  return <form></form>;
+  return (
+    <form>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+
+      <button type="submit">Log In</button>
+    </form>
+  );
 }
