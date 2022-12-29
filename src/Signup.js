@@ -22,7 +22,8 @@ export default function Signup() {
     }).then((res) => {
       if (res.ok) {
         console.log("success", res);
-        res.json().then(set);
+      } else {
+        console.log("Failed");
       }
     });
   }
