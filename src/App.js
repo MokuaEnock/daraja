@@ -35,14 +35,14 @@ function App() {
       body: JSON.stringify({
         BusinessShortCode: 174379,
         Password:
-          "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjIxMjI5MDIyNTIw",
-        Timestamp: "20221229022520",
+          "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
+        Timestamp: timestamped,
         TransactionType: "CustomerPayBillOnline",
         Amount: 1,
         PartyA: 254717594017,
         PartyB: 174379,
         PhoneNumber: 254717594017,
-        CallBackURL: "https://daraja.vercel.app/",
+        CallBackURL: "https://daraja.vercel.app/callback_url",
         AccountReference: "CompanyXLTD",
         TransactionDesc: "Payment of X",
       }),
