@@ -8,6 +8,23 @@ export default function Signup() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(email, password, confirm);
+    let user = {
+      email,
+      password_confimation: password,
+    };
+
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then((res) => {
+      if (res.ok) {
+        console.log("success", res);
+        res.json().then(set);
+      }
+    });
   }
 
   return (
