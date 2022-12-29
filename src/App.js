@@ -28,6 +28,7 @@ function App() {
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
     headers.append("Authorization", "Bearer IJPe4iABdZQ0DH9uAK2pIfnOUqUU");
+    headers.append("Mode", "no-cors");
 
     fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
       method: "POST",
