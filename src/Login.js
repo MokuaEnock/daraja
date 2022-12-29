@@ -4,9 +4,15 @@ import { useState } from "react";
 export default function Login() {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(email, password);
+  }
+
   return (
     <main>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"
