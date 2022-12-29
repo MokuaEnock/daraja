@@ -5,9 +5,14 @@ export default function Signup() {
   let [password, setPassword] = useState("");
   let [confirm, setConfirm] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(email, password, confirm);
+  }
+
   return (
     <main>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Email"
