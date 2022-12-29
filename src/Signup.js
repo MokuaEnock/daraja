@@ -8,9 +8,24 @@ export default function Signup() {
   return (
     <main>
       <form>
-        <input type="text" placeholder="Email" value={email} />
-        <input type="text" placeholder="Enter Password" />
-        <input type="text" placeholder="Confirm Password" />
+        <input
+          type="text"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Enter Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Confirm Password"
+          value={confirm}
+          onChange={(e) => setConfirm(e.target.value)}
+        />
         <button type="submit">Submit</button>
       </form>
       <span>Signup With Google</span>
