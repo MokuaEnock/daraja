@@ -8,6 +8,24 @@ export default function Login() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(email, password);
+    let user = {
+      email,
+      password,
+    };
+
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then((res) => {
+      if (res.ok) {
+        console.log("success", res);
+      } else {
+        console.log("Failed");
+      }
+    });
   }
 
   return (
