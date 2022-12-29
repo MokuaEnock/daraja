@@ -1,6 +1,6 @@
 export default function Signup() {
   return (
-    <section>
+    <main>
       <form>
         <input type="text" />
         <input type="text" />
@@ -9,6 +9,6 @@ export default function Signup() {
         <button type="submit">Submit</button>
       </form>
       <span>Signup With Google</span>
-    </section>
+    </main>
   );
 }
