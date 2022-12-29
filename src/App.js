@@ -25,32 +25,6 @@ function App() {
     let timestamped = `${year}${month}${day}${hour}${minutes}${secss(seconds)}`;
     console.log(phone, amount, timestamped);
 
-    let headers = new Headers();
-    headers.append("Content-Type", "application/json");
-    headers.append("Authorization", "Bearer IJPe4iABdZQ0DH9uAK2pIfnOUqUU");
-    headers.append("Mode", "no-cors");
-
-    fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({
-        BusinessShortCode: 174379,
-        Password:
-          "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
-        Timestamp: timestamped,
-        TransactionType: "CustomerPayBillOnline",
-        Amount: 1,
-        PartyA: 254717594017,
-        PartyB: 174379,
-        PhoneNumber: 254717594017,
-        CallBackURL: "https://daraja.vercel.app/callback_url",
-        AccountReference: "CompanyXLTD",
-        TransactionDesc: "Payment of X",
-      }),
-    })
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log(error));
   }
   return (
     <main>
