@@ -22,6 +22,8 @@ export default function Landing() {
         />
         <button type="submit">Submit</button>
       </form>
+
+      <span></span>
     </main>
   );
 }

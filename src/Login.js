@@ -10,6 +10,8 @@ export default function Login() {
 
         <button type="submit">Log In</button>
       </form>
+
+      <span>Login with Google</span>
     </main>
   );
 }
