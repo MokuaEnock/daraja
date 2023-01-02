@@ -7,6 +7,25 @@ export default function Main() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(phone, total);
+
+    let payment = {
+      phone,
+      total,
+    };
+
+    fetch("http://localhost:3000/numbers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payment),
+    }).then((res) => {
+      if (res.ok) {
+        console.log("success", res);
+      } else {
+        console.log("Failed");
+      }
+    });
   }
 
   return (
