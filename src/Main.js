@@ -13,7 +13,7 @@ export default function Main() {
       total,
     };
 
-    fetch("http://localhost:3000/numbers", {
+    fetch("http://localhost:3000/payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
