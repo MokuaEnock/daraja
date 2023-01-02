@@ -6,7 +6,8 @@ export default function Main() {
 
   return (
     <main>
-      <from>
+      <form>
+        <span>Confirm payment</span>
         <input
           type="number"
           value={phone}
@@ -17,7 +18,9 @@ export default function Main() {
           value={total}
           onChange={(e) => setTotal(e.target.value)}
         />
-      </from>
+
+        <button type="submit">Confirm payment</button>
+      </form>
     </main>
   );
 }
