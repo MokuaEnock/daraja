@@ -6,14 +6,13 @@ export default function Main() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(phone, total);
 
     let payment = {
       phone,
       total,
     };
 
-    fetch("http://localhost:3000/payment", {
+    fetch("http://localhost:3000/payments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
