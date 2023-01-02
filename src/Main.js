@@ -4,9 +4,14 @@ export default function Main() {
   let [phone, setPhone] = useState("");
   let [total, setTotal] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(phone, total);
+  }
+
   return (
     <main>
-      <form>
+      <form onSubmit={handleSubmit}>
         <span>Confirm payment</span>
         <input
           type="number"
