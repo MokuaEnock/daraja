@@ -1,3 +1,13 @@
+import { useState } from "react";
+
 export default function Main() {
-  return <main>Welcome to this trial App</main>;
+  let [phone, setPhone] = useState("");
+
+  return (
+    <main>
+      <from>
+        <input type="number" value={phone} on />
+      </from>
+    </main>
+  );
 }
