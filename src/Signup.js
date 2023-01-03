@@ -52,6 +52,7 @@ export default function Signup() {
         />
         <button type="submit">Submit</button>
       </form>
+      <span>Signup With Github</span>
       <span>Signup With Google</span>
     </main>
   );

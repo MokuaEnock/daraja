@@ -34,11 +34,13 @@ export default function Main() {
         <input
           type="number"
           value={phone}
+          placeholder ="Phone Number"
           onChange={(e) => setPhone(e.target.value)}
         />
         <input
           type="number"
           value={total}
+          placeholder ="Amount"
           onChange={(e) => setTotal(e.target.value)}
         />
 
